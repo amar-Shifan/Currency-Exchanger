@@ -1,10 +1,9 @@
-import express from 'express'
-import exchangeController from '../controller/exchangeController'
+import express from 'express';
+import { renderHome, convertController } from '../controller/exchangeController';
 
 const router = express.Router();
 
-
-router.get('/'  , exchangeController.renderHome)
-router.post('/convert' , exchangeController.convertController)
+router.get('/', renderHome);
+router.post('/convert', convertController);
 
 export default router;
